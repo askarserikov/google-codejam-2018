@@ -1,9 +1,3 @@
-import random
-
-
-a = [random.randint(0, 10000000000000000) for _ in range(100)]
-
-
 def extract_digits(n):
     extracted = []
     while n >= 10:
@@ -49,4 +43,10 @@ def count_moves(n, case):
                     num += 8 * 10 ** (len(b) - j - 1)
                 result = remainder - num
                 break
-    print("Case #{}: {}".format(case + 1, result))
+    print("Case #{}: {}".format(case, result))
+
+
+n_cases = int(input())
+for case in range(1, n_cases+1):
+    n = int(input())
+    count_moves(n, case)
